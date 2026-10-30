@@ -14,10 +14,10 @@
     * Open a private window in your browser. Copy and paste the link to your pull request into the address bar. Make sure you can see your pull request properly. This helps the technical facilitator and learning support staff review your submission easily.
 
 Checklist:
-- [ ] Create a branch called `assignment-one`.
-- [ ] Ensure that the repository is public.
-- [ ] Review [the PR description guidelines](https://github.com/UofT-DSI/onboarding/blob/main/onboarding_documents/submissions.md#guidelines-for-pull-request-descriptions) and adhere to them.
-- [ ] Verify that the link is accessible in a private browser window.
+- [x] Create a branch called `assignment-one`.
+- [x] Ensure that the repository is public.
+- [x] Review [the PR description guidelines](https://github.com/UofT-DSI/onboarding/blob/main/onboarding_documents/submissions.md#guidelines-for-pull-request-descriptions) and adhere to them.
+- [x] Verify that the link is accessible in a private browser window.
 
 If you encounter any difficulties or have questions, please don't hesitate to reach out to our team via our Slack. Our Technical Facilitators and Learning Support staff are here to help you navigate any challenges.
 
@@ -209,5 +209,11 @@ Consider, for example, concepts of fariness, inequality, social structures, marg
 
 
 ```
-Your thoughts...
+The immediate observation that jumped out to me as I considered the prompt was how  with the incredible integration of technology in our daily lives, this new digital age has been, in a sense, defined by data accumulation and then updates to the algorithm that serves us. Likes, shares, and comments on social media are used to push certain content towards us in an almost instantaneous manner. 
+
+For example, studies have identified that Twitter algorithms inherently predict what kind of content would be consumed by a new user based off of gender and geographical information. However, there have been several complaints regarding the options available for gender, leading to misgendering for patients that do not fall into the binary of ‘male’ or ‘female’. This misgendering can lead to a discrepancy in what kind of content might be stereotypically promoted to the individual based off real-world consumption information stratified by patient demographics. Moreover, for marginalized individuals that do not fall into the typical social constraints, such as individuals identifying with racial minorities and LGBTQIA2+ communities, there is an additional and understandable concern over safety and privacy risks for their personhood to be had. Social media algorithms may push content based off the database classification for gender that can expose them to the public against their will, impinging on a person’s autonomy. For example, a transman misgendered as a woman could be pushed to consume content that is stereotypically inferred for women, influencing their perception of themselves and their self-esteem.  
+
+These value systems that define users by sex, gender, race and other attributes, can also take input from biometric information such as photos and content posted on the app. For example, studies have investigated the heavy moderation and suppression of posts made in more revealing clothing of plus-sized users in comparison to those of a more socially accepted body type. Racial profiling further adds to this discrimination as people of colour face more suppression in terms of their content in comparison to white individuals. Any political discourse from people of colour may also be suppressed if the content is flagged as political and meets specific types of categorized attributes.
+
+Overall, it is imperative that databases and value systems evolve over time to accommodate the social and technological advancements as dictated within the article in the Wired at the end. As this article speaks about how the NADRA database was initially structured to take in the social value systems present within Pakistan, such as their perspective on what a family structure and social roles looks like, it highlights ultimately how much of database designs can be shaped by social assumptions and human choices. These observations in social media value systems highlight that social assumptions made can introduce biases and detract from user experience and presented opportunities, especially for individuals belonging to marginalized communities. 
 ```
