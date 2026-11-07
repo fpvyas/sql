@@ -14,11 +14,11 @@
     * Open a private window in your browser. Copy and paste the link to your pull request into the address bar. Make sure you can see your pull request properly. This helps the technical facilitator and learning support staff review your submission easily.
 
 Checklist:
-- [ ] 🚨🚨🚨 After forking, open the **Actions** tab in your own SQL repository. If prompted, click **I understand my workflows, go ahead and enable them** before opening your assignment pull request. This enables automatic SQL feedback on your pull request.
-- [ ] Create a branch called `assignment-two`.
-- [ ] Ensure that the repository is public.
-- [ ] Review [the PR description guidelines](https://github.com/UofT-DSI/onboarding/blob/main/onboarding_documents/submissions.md#guidelines-for-pull-request-descriptions) and adhere to them.
-- [ ] Verify that the link is accessible in a private browser window.
+- [x] 🚨🚨🚨 After forking, open the **Actions** tab in your own SQL repository. If prompted, click **I understand my workflows, go ahead and enable them** before opening your assignment pull request. This enables automatic SQL feedback on your pull request.
+- [x] Create a branch called `assignment-two`.
+- [x] Ensure that the repository is public.
+- [x] Review [the PR description guidelines](https://github.com/UofT-DSI/onboarding/blob/main/onboarding_documents/submissions.md#guidelines-for-pull-request-descriptions) and adhere to them.
+- [x] Verify that the link is accessible in a private browser window.
 
 If you encounter any difficulties or have questions, please don't hesitate to reach out to our team via our Slack. Our Technical Facilitators and Learning Support staff are here to help you navigate any challenges.
 
@@ -57,7 +57,9 @@ The store wants to keep customer addresses. Propose two architectures for the CU
 **HINT:** search type 1 vs type 2 slowly changing dimensions. 
 
 ```
-Your answer...
+To keep customer addresses even with any updates, the store can first create a type 2 architecture containing customer_id, customer_first_name, customer_last_name, customer_address, and current_status (referring to if they still live there). This way, as a new customer address is added, the status can be changed to indicate which customer_address is the active value. 
+
+However, if they would rather update the addresses and have them overwrite the previous customer_address, they could have these following keys: customer_id, customer_first_name, customer_last_name, and customer_address. They would not need to include current_status as a key as it would only include information regarding the active address. This architecture that would overwrite updates is the type 1 slowly changing dimensions architecture.
 ```
 
 ***
@@ -193,5 +195,13 @@ Consider, for example, concepts of labour, bias, LLM proliferation, moderating c
 
 
 ```
-Your thoughts...
+I found this article incredibly interesting and poignant. With the rise of LLMs in the public sphere, many individuals have been turning to using LLMs as a means of efficiency and speed. In my own academic and personal life, I have seen individuals around me use an LLM to summarize a journal article or find a new recipe to cook for dinner.
+
+What really stood out to me when reading this article was how it was centred around reminding the readers about how humans and human effort has built the foundation that is currently enabling AI to flourish. One important aspect that this article touches upon is the hidden labour to enable classification of images and words. Studies have evaluated the impact of Amazon’s Mechanical Turk (MT) program, which has now since shut down, on the perception of AI automation and consumption, and on the personhood of the workers. The cost of automation with increased consumption is paid by the labourers who earn less than a dollar per task assigned to them; these workers often fit a specific demographic which includes citizens from countries of the Global South, refugees, prison workers and those in poverty. At the fraction of a dollar that they would earn, the number of tasks to be completed by these individuals to earn a liveable sum is exceptionally large. 
+
+Moreover, these individuals are not unionized and the corporations contracting these workers provide no support during any potential dispute. For example, in 2022 when a company, AI Insights, worked with the MT platform, they rejected all the work produced by the workers despite utilizing the classification output and resulting in no payment for the efforts of the labourers. MT refused to intervene. The lack of protections for these labourers is a sign of abuse and exploitation, which is often hidden when the corporations are able to monetize their LLM platforms. According to the International Rescue Committee’s Anti-Trafficking Response, these individuals may also be compensated using non-cash formats or have their pay withheld due to arbitrary reasons. 
+
+One additional aspect to also consider is the content moderation. The tasks for AI use oftentimes include image and video classifications as noted within the Substack article. For example, OpenAI worked with subcontractors in Kenya where they had workers, for exceptionally little pay in proportion to the task at hand, label explicit and violent content. This included identifying, labelling and flagging child sexual abuse, rape, and other violent and concerning content. A similar incident occurred with Meta as well, with a resulting lawsuit due to the harms resulting on their wellbeing, personal lives and personhood. 
+
+Ultimately, while there are many other important considerations brought up within this article, the hidden labour and its resulting costs on people through exploitation of wages and psychological well-being is an ethical issue that stood out to me the most.
 ```
