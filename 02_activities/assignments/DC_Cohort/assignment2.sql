@@ -72,10 +72,10 @@ You can make this a running count by including an ORDER BY within the PARTITION 
 Filter the visits to dates before April 29, 2022. */
 --QUERY 4
 
-SELECT DISTINCT customer_id, product_id, purchase_count FROM (
-	SELECT customer_id, product_id,
-	COUNT (*) OVER (PARTITION BY customer_id ORDER BY product_id) as purchase_count
-	FROM customer_purchases);
+SELECT customer_id, product_id, market_date,
+	COUNT (*) OVER (PARTITION BY product_id, customer_id ORDER BY market_date, product_id) AS purchase_count
+FROM customer_purchases
+WHERE market_date < '2022-04-29';
 
 --END QUERY
 
@@ -150,7 +150,7 @@ UNION
 SELECT
     market_date,
     daily_sales,
-    'Worst Day' AS sales_category,
+    'Worst Day' AS sales_category
 FROM sales_ranks
 WHERE lowest_rank = 1
 ORDER BY daily_sales DESC;
