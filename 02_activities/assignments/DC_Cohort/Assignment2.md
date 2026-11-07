@@ -57,7 +57,9 @@ The store wants to keep customer addresses. Propose two architectures for the CU
 **HINT:** search type 1 vs type 2 slowly changing dimensions. 
 
 ```
-Your answer...
+To keep customer addresses even with any updates, the store can first create a type 2 architecture containing customer_id, customer_first_name, customer_last_name, customer_address, and current_status (referring to if they still live there). This way, as a new customer address is added, the status can be changed to indicate which customer_address is the active value. 
+
+However, if they would rather update the addresses and have them overwrite the previous customer_address, they could have these following keys: customer_id, customer_first_name, customer_last_name, and customer_address. They would not need to include current_status as a key as it would only include information regarding the active address. This architecture that would overwrite updates is the type 1 slowly changing dimensions architecture.
 ```
 
 ***
