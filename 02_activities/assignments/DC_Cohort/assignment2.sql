@@ -127,7 +127,6 @@ with a UNION binding them. */
 
 CREATE TEMP TABLE total_sales AS 
 	SELECT market_date, 
-	SUM(quantity) AS daily_sales,
 	SUM(quantity * cost_per_quantity) AS total_money_earned
 FROM customer_purchases
 GROUP BY market_date;
@@ -135,25 +134,25 @@ GROUP BY market_date;
 CREATE TEMP TABLE sales_ranks AS
 SELECT
     market_date,
-    daily_sales,
-    RANK() OVER (ORDER BY daily_sales DESC) AS highest_rank,
-    RANK() OVER (ORDER BY daily_sales ASC) AS lowest_rank
+    total_money_earned,
+    RANK() OVER (ORDER BY total_money_earned DESC) AS highest_rank,
+    RANK() OVER (ORDER BY total_money_earned ASC) AS lowest_rank
 FROM total_sales;
 
 SELECT
     market_date,
-    daily_sales,
+    total_money_earned,
     'Best Day' AS sales_category
 FROM sales_ranks
 WHERE highest_rank = 1
 UNION
 SELECT
     market_date,
-    daily_sales,
+    total_money_earned,
     'Worst Day' AS sales_category
 FROM sales_ranks
 WHERE lowest_rank = 1
-ORDER BY daily_sales DESC;
+ORDER BY total_money_earned DESC;
 
 --END QUERY
 
